@@ -1,4 +1,4 @@
-# Porject3
+# Project3
 interfaceAbstractDemo
 
 interface,oop,class,metot,inheritance uygulanması
