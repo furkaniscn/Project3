@@ -7,14 +7,16 @@ public class Customer {
 	private String lastName;
 	private int birthYear;
 	private String nationalityId;
+	private int numberOfStars;
 
-	public Customer(int id, String firstName, String lastName, int birthYear, String nationalityId) {
+	public Customer(int id, String firstName, String lastName, int birthYear, String nationalityId, int numberOfStars) {
 
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthYear = birthYear;
 		this.nationalityId = nationalityId;
+		this.numberOfStars = numberOfStars;
 	}
 
 	public Customer() {
@@ -60,5 +62,14 @@ public class Customer {
 	public void setNationalityId(String nationalityId) {
 		this.nationalityId = nationalityId;
 	}
+	
+	public int getNumberOfStars() {
+		return numberOfStars;
+	}
+
+	public void setNumberOfStars(int numberOfStars) {
+		this.numberOfStars = numberOfStars;
+	}
+
 
 }
