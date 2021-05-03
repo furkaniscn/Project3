@@ -6,13 +6,17 @@ public class StarbucksCustomerManager implements StarbucksCustomerService{
 	@Override
 	public boolean control(Customer customer) {
 		if(customer.getFirstName().length() >= 2 && customer.getLastName().length() >= 2 && customer.getNationalityId().length() == 11 &&
-			customer.getBirthYear() < 2003	) {
+			customer.getBirthYear() < 2003 && customer.getNumberOfStars() >=0) {
 			
-			System.out.println("Doğrulama başarılı");
+			System.out.println("DoÄŸrulama baÅŸarÄ±lÄ±");
+			int total = 1;
+			total = total + customer.getNumberOfStars();
+			System.out.println("Tebirkler kahve alÄ±mÄ±ndan yÄ±ldÄ±z kazandÄ±nÄ±z:  " + total);
+
 			return true;
 			
 		}else {
-			System.out.println("Doğrulama başarısız");
+			System.out.println("DoÄŸrulama baÅŸarÄ±sÄ±z");
 			return false;
 		}
 		
@@ -20,7 +24,7 @@ public class StarbucksCustomerManager implements StarbucksCustomerService{
 
 	@Override
 	public void save(Customer customer) {
-		System.out.println("Veritabanına kaydedildi: " + customer.getFirstName());
+		System.out.println("VeritabanÄ±na kaydedildi: " + customer.getFirstName());
 		
 	}
 
